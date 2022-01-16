@@ -6,7 +6,7 @@ const overlay = document.querySelector(".overlay");
 if (bar) {
   bar.addEventListener("click", () => {
     nav.classList.add("active");
-    overlay.style.display = "block";
+    overlay.classList.remove("overlay-hidden");
     document.body.style.overflowY = "hidden";
   });
 }
@@ -14,7 +14,7 @@ if (bar) {
 if (close) {
   close.addEventListener("click", () => {
     nav.classList.remove("active");
-    overlay.style.display = "none";
+    overlay.classList.add("overlay-hidden");
     document.body.style.overflowY = "visible";
   });
 }
@@ -22,7 +22,7 @@ if (close) {
 if (overlay) {
   overlay.addEventListener("click", () => {
     nav.classList.remove("active");
-    overlay.style.display = "none";
+    overlay.classList.add("overlay-hidden");
     document.body.style.overflowY = "visible";
   });
 }

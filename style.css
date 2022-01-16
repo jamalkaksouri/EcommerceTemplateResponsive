@@ -531,8 +531,8 @@ footer .copyright {
 }
 
 .overlay {
-  background: hsla(0, 0%, 40%, 0.25);
-  display: none;
+  background: #000;
+  opacity: 0.6;
   height: 100vh;
   z-index: 60;
   position: fixed;
@@ -540,7 +540,12 @@ footer .copyright {
   left: 0;
   right: 0;
   bottom: 0;
-  animation: Eb 0.4s ease-in-out 0s backwards;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlay-hidden {
+  opacity: 0;
 }
 
 /* Start Media Query */
