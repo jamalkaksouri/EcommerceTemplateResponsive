@@ -531,10 +531,10 @@ footer .copyright {
 }
 
 .overlay {
+  visibility: visible;
   background: #000;
   opacity: 0.6;
   height: 100vh;
-  z-index: 60;
   position: fixed;
   top: 0;
   left: 0;
@@ -545,6 +545,7 @@ footer .copyright {
 }
 
 .overlay-hidden {
+  visibility: hidden;
   opacity: 0;
 }
 
@@ -723,6 +724,9 @@ footer .copyright {
   footer .copyright {
     text-align: start;
   }
+  .modal-content {
+    width: 21rem !important;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -738,4 +742,59 @@ footer .copyright {
   #sm-banner .banner-box {
     background-position: 74%;
   }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+
+.close-button:hover {
+  background-color: darkgray;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+button.trigger {
+  cursor: pointer;
+}
+
+.modal-content p a {
+  color: #367def;
+  font-weight: 600;
+  text-decoration: none;
 }
