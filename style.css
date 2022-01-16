@@ -542,6 +542,7 @@ footer .copyright {
   bottom: 0;
   z-index: -1;
   transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
 }
 
 .overlay-hidden {
@@ -755,6 +756,8 @@ footer .copyright {
   visibility: hidden;
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  -webkit-transition: visibility 0s linear 0.25s, opacity 0.25s 0s,
+    transform 0.25s;
 }
 
 .modal-content {
@@ -787,6 +790,8 @@ footer .copyright {
   visibility: visible;
   transform: scale(1);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  -webkit-transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 1;
 }
 
 button.trigger {
