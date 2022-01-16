@@ -541,6 +541,7 @@ footer .copyright {
   right: 0;
   bottom: 0;
   z-index: -1;
+  -webkit-transform: translate3d(0, 0, 0);
   transition: opacity 0.3s ease-in-out;
   -webkit-transition: opacity 0.3s ease-in-out;
 }
@@ -796,10 +797,10 @@ footer .copyright {
 
 button.trigger {
   cursor: pointer;
-  /* animation: pulse 800ms infinite alternate-reverse; */
+  animation: pulse 800ms infinite alternate-reverse;
 }
 
-/* @keyframes pulse {
+@keyframes pulse {
   0% {
     color: #1c2f4f;
     transform: scale(1.1);
@@ -808,7 +809,7 @@ button.trigger {
     color: #c50008;
     transform: scale(1.4);
   }
-} */
+}
 
 .modal-content p a {
   color: #367def;
