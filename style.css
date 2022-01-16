@@ -540,7 +540,6 @@ footer .copyright {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
   -webkit-transform: translate3d(0, 0, 0);
   transition: opacity 0.3s ease-in-out;
   -webkit-transition: opacity 0.3s ease-in-out;
