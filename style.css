@@ -791,6 +791,18 @@ footer .copyright {
 
 button.trigger {
   cursor: pointer;
+  animation: pulse 800ms infinite alternate-reverse;
+}
+
+@keyframes pulse {
+  0% {
+    color: #1c2f4f;
+    transform: scale(1.1);
+  }
+  100% {
+    color: #c50008;
+    transform: scale(1.4);
+  }
 }
 
 .modal-content p a {
