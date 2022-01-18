@@ -2,6 +2,10 @@ const bar = document.querySelector("#bar");
 const nav = document.querySelector("#navbar");
 const close = document.querySelector("#close");
 const overlay = document.querySelector(".overlay");
+const modal = document.querySelector(".modal");
+const trigger = document.querySelector(".trigger");
+const scrollup = document.querySelector(".scroll-up");
+const closeButton = document.querySelector(".close-button");
 
 if (bar) {
   bar.addEventListener("click", () => {
@@ -27,10 +31,6 @@ if (overlay) {
   });
 }
 
-const modal = document.querySelector(".modal");
-const trigger = document.querySelector(".trigger");
-const closeButton = document.querySelector(".close-button");
-
 function toggleModal() {
   modal.classList.toggle("show-modal");
 }
@@ -44,8 +44,6 @@ function windowOnClick(event) {
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
-
-const scrollup = document.querySelector(".scroll-up");
 
 function scrollHandler() {
   if (window.scrollY >= 500) {
@@ -66,6 +64,17 @@ if (scrollup) {
   scrollup.addEventListener("click", scrollToHandler);
 }
 
-window.innerHeight < window.innerWidth
-  ? (document.querySelector("#lock-orientation").style.display = "table")
-  : (document.querySelector("#lock-orientation").style.display = "none");
+function doOnOrientationChange() {
+  switch (window.orientation) {
+    case -90:
+    case 90:
+      document.querySelector("#lock-orientation").style.display = "table";
+      break;
+    default:
+      document.querySelector("#lock-orientation").style.display = "none";
+      break;
+  }
+}
+
+window.addEventListener("orientationchange", doOnOrientationChange);
+window.onload = doOnOrientationChange;

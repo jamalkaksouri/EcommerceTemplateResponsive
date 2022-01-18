@@ -1004,3 +1004,9 @@ button.trigger {
   margin: 0 auto 25px;
   height: 156px;
 }
+
+#lock-orientation ._wrapper .thumb img {
+  max-width: 100%;
+  font-style: italic;
+  vertical-align: middle;
+}
