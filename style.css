@@ -842,48 +842,8 @@ button.trigger {
   overflow: hidden;
   border-radius: 50%;
   position: relative;
-  background-color: #2c303a;
   border: 2px solid #fff;
   background: #fff;
-  background: -moz-radial-gradient(
-    center,
-    ellipse cover,
-    #fff 0,
-    #fff 48px,
-    #fff 49px
-  );
-  background: -webkit-gradient(
-    radial,
-    center center,
-    0,
-    center center,
-    100%,
-    color-stop(0, #fff),
-    color(48px, #fff),
-    color-stop(49px, #fff)
-  );
-  background: -webkit-radial-gradient(
-    center,
-    ellipse cover,
-    #fff 0,
-    #fff 48px,
-    #fff 49px
-  );
-  background: -o-radial-gradient(
-    center,
-    ellipse cover,
-    #fff 0,
-    #fff 48px,
-    #fff 49px
-  );
-  background: -ms-radial-gradient(
-    center,
-    ellipse cover,
-    #fff 0,
-    #fff 48px,
-    #fff 49px
-  );
-  background: radial-gradient(ellipse at center, #fff 0, #fff 48px, #fff 49px);
 }
 
 .avatar img {
