@@ -1033,7 +1033,7 @@ button.trigger {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 65px;
+  height: 55px;
 }
 
 .app-download {
@@ -1044,8 +1044,8 @@ button.trigger {
 }
 
 .app-download img {
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   object-fit: contain;
   background-color: #0cab9f;
   border-radius: 5px;
