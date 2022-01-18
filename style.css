@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Spartan", sans-serif;
   scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
 }
 
 h1 {
