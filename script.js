@@ -65,3 +65,7 @@ if (scrollup) {
   window.addEventListener("scroll", scrollHandler);
   scrollup.addEventListener("click", scrollToHandler);
 }
+
+window.innerHeight < window.innerWidth
+  ? (document.querySelector("#lock-orientation").style.display = "table")
+  : (document.querySelector("#lock-orientation").style.display = "none");
