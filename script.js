@@ -44,3 +44,24 @@ function windowOnClick(event) {
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
+
+const scrollup = document.querySelector(".scroll-up");
+
+function scrollHandler() {
+  if (window.scrollY >= 500) {
+    scrollup.style.visibility = "visible";
+    scrollup.style.opacity = 1;
+  } else {
+    scrollup.style.visibility = "hidden";
+    scrollup.style.opacity = 0;
+  }
+}
+
+const scrollToHandler = () => {
+  window.scrollTo(0, 0);
+};
+
+if (scrollup) {
+  window.addEventListener("scroll", scrollHandler);
+  scrollup.addEventListener("click", scrollToHandler);
+}
