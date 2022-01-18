@@ -756,7 +756,7 @@ footer .copyright {
   .scroll-up {
     width: 40px !important;
     height: 40px !important;
-    margin: 0 0 80px 10px !important;
+    margin: 0 0 70px 10px !important;
   }
 
   .app {
@@ -1073,4 +1073,8 @@ button.trigger {
 
 .hidden-app-menu {
   visibility: hidden !important;
+}
+
+.scrollMargin {
+  margin: 0 0 20px 10px !important;
 }

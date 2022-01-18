@@ -7,6 +7,7 @@ const trigger = document.querySelector(".trigger");
 const scrollup = document.querySelector(".scroll-up");
 const closeButton = document.querySelector(".close-button");
 const appMenu = document.querySelector(".app");
+const scup = document.querySelector(".scroll-up");
 const closeApp = document.querySelector(".close");
 
 if (bar) {
@@ -83,5 +84,6 @@ window.onload = doOnOrientationChange;
 
 const closeAppHandler = () => {
   appMenu.classList.add("hidden-app-menu");
+  scup.classList.add("scrollMargin");
 };
 closeApp.addEventListener("click", closeAppHandler);
