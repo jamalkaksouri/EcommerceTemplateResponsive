@@ -728,6 +728,19 @@ footer .copyright {
   .modal-content {
     width: 21rem !important;
   }
+  #avatars {
+    flex-wrap: wrap-reverse;
+    min-height: 150px;
+    justify-content: center !important;
+  }
+  .avatar {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .avatar-group .hidden-avatars {
+    width: 60px !important;
+    height: 60px !important;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -814,4 +827,98 @@ button.trigger {
   color: #367def;
   font-weight: 600;
   text-decoration: none;
+}
+
+#avatars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  background-color: #2c303a;
+  border: 2px solid #fff;
+  background: #fff;
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    #fff 0,
+    #fff 48px,
+    #fff 49px
+  );
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0,
+    center center,
+    100%,
+    color-stop(0, #fff),
+    color(48px, #fff),
+    color-stop(49px, #fff)
+  );
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    #fff 0,
+    #fff 48px,
+    #fff 49px
+  );
+  background: -o-radial-gradient(
+    center,
+    ellipse cover,
+    #fff 0,
+    #fff 48px,
+    #fff 49px
+  );
+  background: -ms-radial-gradient(
+    center,
+    ellipse cover,
+    #fff 0,
+    #fff 48px,
+    #fff 49px
+  );
+  background: radial-gradient(ellipse at center, #fff 0, #fff 48px, #fff 49px);
+}
+
+.avatar img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.avatar-group {
+  display: flex;
+}
+
+.avatar-group.rtl .avatar:hover:not(:last-of-type) {
+  transform: translate(10px);
+}
+
+.avatar-group .avatar {
+  margin-left: -20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.avatar-group .avatar:hover:not(:last-of-type) {
+  transform: translate(-10px);
+}
+
+.avatar-group .hidden-avatars {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3px;
+  margin-right: 23px;
+  background-color: #2c303a;
+  color: #fff;
 }
