@@ -553,6 +553,9 @@ footer .copyright {
   .section-p1 {
     padding: 40px;
   }
+  .app {
+    visibility: visible !important;
+  }
 
   #navbar {
     display: flex;
@@ -753,6 +756,11 @@ footer .copyright {
   .scroll-up {
     width: 40px !important;
     height: 40px !important;
+    margin: 0 0 80px 10px !important;
+  }
+
+  .app {
+    visibility: visible !important;
   }
 }
 
@@ -1009,4 +1017,60 @@ button.trigger {
   max-width: 100%;
   font-style: italic;
   vertical-align: middle;
+}
+
+.app {
+  display: flex;
+  visibility: hidden;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-direction: row-reverse;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 9999 !important;
+  color: #fff !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+}
+
+.app-download {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.app-download img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  background-color: #0cab9f;
+  border-radius: 5px;
+  margin: 12px;
+  padding: 2px;
+}
+
+.app-download h4 {
+  font-size: 13px;
+  color: #fff !important;
+  font-weight: 400;
+}
+
+.app span {
+  padding: 15px;
+  font-size: 25px;
+  align-items: center;
+  line-height: 1;
+}
+
+.fa,
+.fas {
+  font-weight: 100;
+}
+
+.hidden-app-menu {
+  visibility: hidden !important;
 }

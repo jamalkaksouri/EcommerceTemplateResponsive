@@ -6,6 +6,8 @@ const modal = document.querySelector(".modal");
 const trigger = document.querySelector(".trigger");
 const scrollup = document.querySelector(".scroll-up");
 const closeButton = document.querySelector(".close-button");
+const appMenu = document.querySelector(".app");
+const closeApp = document.querySelector(".close");
 
 if (bar) {
   bar.addEventListener("click", () => {
@@ -78,3 +80,8 @@ function doOnOrientationChange() {
 
 window.addEventListener("orientationchange", doOnOrientationChange);
 window.onload = doOnOrientationChange;
+
+const closeAppHandler = () => {
+  appMenu.classList.add("hidden-app-menu");
+};
+closeApp.addEventListener("click", closeAppHandler);
